@@ -5,19 +5,50 @@ namespace battleship_console
 {
     class GameGrid
     {
+        string [] alphabet = new [] {"A","B","C","D","E", "F", "G", "H", "I", "J"};
         private int gridLength = 10;
         private static int gridSize = 100;
-        private int [] grid = new int[gridSize];
 
-        public ArrayList placeShip () {
-            ArrayList findCells = new ArrayList();
+        public ArrayList placeShip (int size) {
 
-                Boolean success = false;
-               int location = 0; 
-            while (!success) {
+            ArrayList randomCoords = new ArrayList(); 
+                string temp = null;  
+                int [] coords = new int[size];  
+                bool success = false;      
+                int location = 0; 
+
+                while (!success)
+                {
                 Random randomGridCoords = new Random();
-                location = (int) (randomGridCoords.Next(gridLength, gridSize);
-            }
+                location = (int) (randomGridCoords.Next(gridSize));
+                    if ((location % gridLength) <= 5){
+                    success = true;
+                    }
+                
+                }
+
+                int n = 0;
+                while (n < size)
+                {
+                        coords[n++] = location;
+                        location += 1;
+                }
+                
+                int x = 0;
+                int row = 0;
+                int col = 0;
+
+                while (x < size)
+                {
+                    row = (int) (coords[x] / gridLength);
+                    col = coords[x] % gridLength;
+                    temp = alphabet[col];
+                    randomCoords.Add(string.Concat(temp,row.ToString()));
+                    x++;
+                    System.Console.WriteLine(" coord "+x+" = " + randomCoords[x-1]);
+                }
+                return randomCoords;
+                
         }
     }
 }
