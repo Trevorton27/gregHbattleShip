@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace battleship_console
 {
@@ -28,7 +29,6 @@ namespace battleship_console
                 System.Console.WriteLine("Enter guess");
                 var userGuess = System.Console.ReadLine();
                 ship.checkUserGuess(userGuess);
-                // System.Console.WriteLine(guessResult);
                 }
             }
             // finishGame();

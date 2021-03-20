@@ -8,7 +8,6 @@ namespace battleship_console
         string [] alphabet = new [] {"A","B","C","D","E", "F", "G", "H", "I", "J"};
         private int gridLength = 10;
         private static int gridSize = 100;
-
         public ArrayList placeShip (int size) {
 
             ArrayList randomCoords = new ArrayList(); 
@@ -24,7 +23,6 @@ namespace battleship_console
                     if ((location % gridLength) <= 5){
                     success = true;
                     }
-                
                 }
 
                 int n = 0;
@@ -47,8 +45,7 @@ namespace battleship_console
                     x++;
                     System.Console.WriteLine(" coord "+x+" = " + randomCoords[x-1]);
                 }
-                return randomCoords;
-                
+                return randomCoords; 
         }
     }
 }
