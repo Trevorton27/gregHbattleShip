@@ -14,8 +14,8 @@ namespace battleship_console
         {
             shipSize = 5;
 
-            System.Console.WriteLine("Welcome! Your goal is to sink the battleship");
-            System.Console.WriteLine("Try to sink the ship within 8 guesses");
+            System.Console.WriteLine("\n\nWelcome! Your goal is to sink the battleship...");
+            System.Console.WriteLine("\nTry to sink the ship within 8 guesses");
 
            var newLocation = gameGrid.placeShip(shipSize);
            ship.setLocationCoords(newLocation);           
@@ -23,42 +23,22 @@ namespace battleship_console
 
         private void startGame () {
                 
-                bool success = true;
-
-                while (success) {
-                System.Console.WriteLine("Enter guess");
+                while (ship.locationCoords.Count > 0 && numOfGuesses <=7) {
+                System.Console.WriteLine("\nEnter guess");
                 var userGuess = System.Console.ReadLine();
                 ship.checkUserGuess(userGuess);
+                numOfGuesses++;
                 }
+                finishGame();
             }
-            // finishGame();
-
-        // private void checkUserGuess(String userGuess) {
-        //     numOfGuesses++;
-
-        //     var result = "miss";
-        //     for(int i = 0; i < ship.size(); i++ ) {
-
-        //     if (result.Equals("hit")) {
-        //         break;
-        //     }
-        //     if (result.Equals("kill")) {
-        //         ship.remove(x);
-        //         break;
-        //     }
-        // }
-        // System.Console.WriteLine(result);
-
-        
-        // private void finishGame () {
-        //     System.Console.WriteLine("You sunk my battleship!");
-        //     if (numOfGuesses <= 7) {
-        //         System.Console.WriteLine("It only took you" + numOfGuesses + " guesses");
-        //     } else {
-        //         System.Console.WriteLine("Took you long enough");
-// 
-// 
-// 
+        private void finishGame () {
+            System.Console.WriteLine("\nGame Over!");
+            if (numOfGuesses <= 7) {
+                System.Console.WriteLine("\nIt only took you" + numOfGuesses + " guesses");
+            } else {
+                System.Console.WriteLine("\nSorry! out of guesses");
+            }
+        }
 
         static void Main(string[] args)
         {

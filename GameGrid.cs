@@ -35,7 +35,6 @@ namespace battleship_console
                 int x = 0;
                 int row = 0;
                 int col = 0;
-
                 while (x < size)
                 {
                     row = (int) (coords[x] / gridLength);
@@ -43,7 +42,7 @@ namespace battleship_console
                     temp = alphabet[col];
                     randomCoords.Add(string.Concat(temp,row.ToString()));
                     x++;
-                    System.Console.WriteLine(" coord "+x+" = " + randomCoords[x-1]);
+                    // System.Console.WriteLine(" coord "+x+" = " + randomCoords[x-1]);
                 }
                 return randomCoords; 
         }

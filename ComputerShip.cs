@@ -13,24 +13,21 @@ namespace battleship_console
              public void checkUserGuess(string userInput)
            {
                int index = locationCoords.IndexOf(userInput.ToUpper());
-               System.Console.WriteLine(userInput);
-               System.Console.WriteLine(locationCoords[0]);
                if (index >= 0) 
                {
                    locationCoords.Remove(userInput.ToUpper());
                    if (locationCoords.Count <= 0) 
                    {
-                       System.Console.WriteLine("Kill");
-                       System.Console.WriteLine("You sunk my battleship!");
+                       System.Console.WriteLine("\nKill");
+                       System.Console.WriteLine("\nYou sunk my battleship!");
                     } else 
                         {
-                             System.Console.WriteLine("Hit");
+                             System.Console.WriteLine("\nHit");
                          }  
                 } else 
                     {
-                        System.Console.WriteLine("Miss");
+                        System.Console.WriteLine("\nMiss");
                     }
-           
         }  
     }               
 }
