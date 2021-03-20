@@ -17,17 +17,19 @@ namespace battleship_console
             System.Console.WriteLine("Try to sink the ship within 8 guesses");
 
            var newLocation = gameGrid.placeShip(shipSize);
-           ship.setLocationCells(newLocation);
-           System.Console.WriteLine(newLocation[0]);
-           
+           ship.setLocationCoords(newLocation);           
         }
 
         private void startGame () {
-           
+                
+                bool success = true;
+
+                while (success) {
                 System.Console.WriteLine("Enter guess");
                 var userGuess = System.Console.ReadLine();
-                string guessResult = ship.checkUserGuess(userGuess);
-                System.Console.WriteLine(guessResult);
+                ship.checkUserGuess(userGuess);
+                // System.Console.WriteLine(guessResult);
+                }
             }
             // finishGame();
 

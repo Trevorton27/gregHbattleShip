@@ -5,36 +5,35 @@ namespace battleship_console
 {
     public class ComputerShip
     {
-           public static ArrayList locationCells = new ArrayList();
-           string result;
-
+           public static ArrayList locationCoords = new ArrayList();
+           string result = "miss";         
            public static int size;
-
-             public void setLocationCells( ArrayList loc) {
-               locationCells = loc;
-              
+             public void setLocationCoords( ArrayList loc) {
+               locationCoords = loc;
            }
-
-             public string checkUserGuess(string userInput)
+             public void checkUserGuess(string userInput)
            {
-               System.Console.WriteLine(userInput);
-               int index = locationCells.IndexOf(userInput);
-               System.Console.WriteLine(index);
+               int index = locationCoords.IndexOf(userInput);
+               System.Console.WriteLine(locationCoords[0]);
                if (index >= 0) 
                {
-                   locationCells.Remove(index);
-                   if (locationCells == null) 
+                   locationCoords.Remove(userInput);
+                   if (locationCoords.Count <= 0) 
                    {
-                       result.Replace("miss", "kill");
+                       string indexKill = result.Replace("miss", "kill");
+                       System.Console.WriteLine(indexKill);
                        System.Console.WriteLine("You sunk my battleship!");
-                   }
-               } else 
-               {
-                   result.Replace("miss","hit");
-               }
-               return result;
-           }
+                    } else 
+                        {
+                            string indexHit = result.Replace("miss","hit");
+                             System.Console.WriteLine(indexHit);
+                         }  
+                } else 
+                    {
+                        System.Console.WriteLine(result);
+                    }
            
+        }  
     }               
 }
 
