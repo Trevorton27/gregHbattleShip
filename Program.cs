@@ -26,9 +26,7 @@ namespace battleship_console
         private void startGame () {
                 
                 while (ship.locationCoords.Count > 0 && numOfGuesses <=7) {
-                
-               
-
+                var userGuess = ship.getUserGuess();
                 ship.checkUserGuess(userGuess);
                 numOfGuesses++;
                 }
@@ -37,17 +35,22 @@ namespace battleship_console
         private void finishGame () {
             System.Console.WriteLine("\nGame Over!");
             if (numOfGuesses <= 7) {
-                System.Console.WriteLine("\nIt only took you " + numOfGuesses + " guesses");
+                System.Console.WriteLine("\nIt only took you " + numOfGuesses + " guesses\n");
             } else {
-                System.Console.WriteLine("\nSorry! out of guesses");
+                System.Console.WriteLine("\nSorry! out of guesses\n");
             }
         }
 
         static void Main(string[] args)
         {
-            Battleship game = new Battleship();
+            do
+            {
+                Battleship game = new Battleship();
             game.setUpGame();
             game.startGame();
+            Console.WriteLine("Play Again? [Y | N]");
+            }
+            while(Console.ReadLine().ToUpper() != "N" );
         }   
     }
 

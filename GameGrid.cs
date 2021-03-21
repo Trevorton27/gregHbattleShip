@@ -42,7 +42,7 @@ namespace battleship_console
                     temp = alphabet[col];
                     randomCoords.Add(string.Concat(temp,row.ToString()));
                     x++;
-                    System.Console.WriteLine(" coord "+x+" = " + randomCoords[x-1]);
+                    // System.Console.WriteLine(" coord "+x+" = " + randomCoords[x-1]);
                 }
                 return randomCoords; 
         }
