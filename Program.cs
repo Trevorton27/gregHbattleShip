@@ -17,6 +17,8 @@ namespace battleship_console
             System.Console.WriteLine("\n\nWelcome! Your goal is to sink the battleship...");
             System.Console.WriteLine("\nTry to sink the ship within 8 guesses");
 
+            gameGrid.drawGrid();
+
            var newLocation = gameGrid.placeShip(shipSize);
            ship.setLocationCoords(newLocation);           
         }
@@ -24,8 +26,9 @@ namespace battleship_console
         private void startGame () {
                 
                 while (ship.locationCoords.Count > 0 && numOfGuesses <=7) {
-                System.Console.WriteLine("\nEnter guess");
-                var userGuess = System.Console.ReadLine();
+                
+               
+
                 ship.checkUserGuess(userGuess);
                 numOfGuesses++;
                 }
@@ -34,7 +37,7 @@ namespace battleship_console
         private void finishGame () {
             System.Console.WriteLine("\nGame Over!");
             if (numOfGuesses <= 7) {
-                System.Console.WriteLine("\nIt only took you" + numOfGuesses + " guesses");
+                System.Console.WriteLine("\nIt only took you " + numOfGuesses + " guesses");
             } else {
                 System.Console.WriteLine("\nSorry! out of guesses");
             }

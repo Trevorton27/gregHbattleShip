@@ -22,13 +22,27 @@ namespace battleship_console
                        System.Console.WriteLine("\nYou sunk my battleship!");
                     } else 
                         {
+                            System.Console.BackgroundColor = ConsoleColor.Red;
                              System.Console.WriteLine("\nHit");
+                             System.Console.ResetColor();
                          }  
                 } else 
                     {
                         System.Console.WriteLine("\nMiss");
                     }
-        }  
+            }
+            
+            public string getUserGuess()
+            {
+                System.Console.WriteLine("\nEnter guess");                
+                var userGuess = System.Console.ReadLine();
+                if(string.IsNullOrEmpty(userGuess))
+                {
+                    System.Console.WriteLine("\nGuess is empty! Please enter a coordinate such as A1, B2 ... ");
+                    userGuess = System.Console.ReadLine();
+                } else if ()
+                return userGuess;
+            }
     }               
 }
 
