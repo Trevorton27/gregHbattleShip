@@ -3,14 +3,14 @@ using System.Text;
 
 namespace battleship_console
 {
-         
+
     class Battleship
     {
         private GameGrid gameGrid = new GameGrid();
         private ComputerShip ship = new ComputerShip();
         private int shipSize;
         private int numOfGuesses = 0;
-        private void setUpGame () 
+        private void setUpGame()
         {
             shipSize = 5;
 
@@ -19,24 +19,31 @@ namespace battleship_console
 
             gameGrid.drawGrid();
 
-           var newLocation = gameGrid.placeShip(shipSize);
-           ship.setLocationCoords(newLocation);           
+            var newLocation = gameGrid.placeShip(shipSize);
+            ship.setLocationCoords(newLocation);
         }
 
-        private void startGame () {
-                
-                while (ship.locationCoords.Count > 0 && numOfGuesses <=7) {
+        private void startGame()
+        {
+
+            while (ship.locationCoords.Count > 0 && numOfGuesses <= 8)
+            {
                 var userGuess = ship.getUserGuess();
                 ship.checkUserGuess(userGuess);
                 numOfGuesses++;
-                }
-                finishGame();
+                gameGrid.drawGrid();
             }
-        private void finishGame () {
+            finishGame();
+        }
+        private void finishGame()
+        {
             System.Console.WriteLine("\nGame Over!");
-            if (numOfGuesses <= 7) {
+            if (numOfGuesses <= 7)
+            {
                 System.Console.WriteLine("\nIt only took you " + numOfGuesses + " guesses\n");
-            } else {
+            }
+            else
+            {
                 System.Console.WriteLine("\nSorry! out of guesses\n");
             }
         }
@@ -46,15 +53,15 @@ namespace battleship_console
             do
             {
                 Battleship game = new Battleship();
-            game.setUpGame();
-            game.startGame();
-            Console.WriteLine("Play Again? [Y | N]");
+                game.setUpGame();
+                game.startGame();
+                Console.WriteLine("Play Again? [Y | N]");
             }
-            while(Console.ReadLine().ToUpper() != "N" );
-        }   
+            while (Console.ReadLine().ToUpper() != "N");
+        }
     }
 
-}   
-   
-  
+}
+
+
 

@@ -13,3 +13,19 @@
 /Users/gregoryhilger/battleship-console/obj/Debug/net5.0/ref/battleship-console.dll
 /Users/gregoryhilger/battleship-console/obj/Debug/net5.0/battleship-console.pdb
 /Users/gregoryhilger/battleship-console/obj/Debug/net5.0/battleship-console.genruntimeconfig.cache
+C:\Users\spira\OneDrive\Documents\SDMM student files\Greg Hilger\battleship-console\bin\Debug\net5.0\battleship-console.exe
+C:\Users\spira\OneDrive\Documents\SDMM student files\Greg Hilger\battleship-console\bin\Debug\net5.0\battleship-console.deps.json
+C:\Users\spira\OneDrive\Documents\SDMM student files\Greg Hilger\battleship-console\bin\Debug\net5.0\battleship-console.runtimeconfig.json
+C:\Users\spira\OneDrive\Documents\SDMM student files\Greg Hilger\battleship-console\bin\Debug\net5.0\battleship-console.runtimeconfig.dev.json
+C:\Users\spira\OneDrive\Documents\SDMM student files\Greg Hilger\battleship-console\bin\Debug\net5.0\battleship-console.dll
+C:\Users\spira\OneDrive\Documents\SDMM student files\Greg Hilger\battleship-console\bin\Debug\net5.0\ref\battleship-console.dll
+C:\Users\spira\OneDrive\Documents\SDMM student files\Greg Hilger\battleship-console\bin\Debug\net5.0\battleship-console.pdb
+C:\Users\spira\OneDrive\Documents\SDMM student files\Greg Hilger\battleship-console\obj\Debug\net5.0\battleship-console.csprojAssemblyReference.cache
+C:\Users\spira\OneDrive\Documents\SDMM student files\Greg Hilger\battleship-console\obj\Debug\net5.0\battleship-console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\spira\OneDrive\Documents\SDMM student files\Greg Hilger\battleship-console\obj\Debug\net5.0\battleship-console.AssemblyInfoInputs.cache
+C:\Users\spira\OneDrive\Documents\SDMM student files\Greg Hilger\battleship-console\obj\Debug\net5.0\battleship-console.AssemblyInfo.cs
+C:\Users\spira\OneDrive\Documents\SDMM student files\Greg Hilger\battleship-console\obj\Debug\net5.0\battleship-console.csproj.CoreCompileInputs.cache
+C:\Users\spira\OneDrive\Documents\SDMM student files\Greg Hilger\battleship-console\obj\Debug\net5.0\battleship-console.dll
+C:\Users\spira\OneDrive\Documents\SDMM student files\Greg Hilger\battleship-console\obj\Debug\net5.0\ref\battleship-console.dll
+C:\Users\spira\OneDrive\Documents\SDMM student files\Greg Hilger\battleship-console\obj\Debug\net5.0\battleship-console.pdb
+C:\Users\spira\OneDrive\Documents\SDMM student files\Greg Hilger\battleship-console\obj\Debug\net5.0\battleship-console.genruntimeconfig.cache
