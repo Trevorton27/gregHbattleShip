@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using static System.Console;
 
 namespace battleship_console
 {
@@ -7,7 +8,6 @@ namespace battleship_console
     {
         string[] alphabet = new[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J" };
         private int gridLength = 10;
-
         private static int gridSize = 100;
         public ArrayList placeShip(int size)
         {
@@ -19,7 +19,6 @@ namespace battleship_console
 
             while (!success)
             {
-                Console.Write(success);
                 Random randomGridCoords = new Random();
                 location = (int)(randomGridCoords.Next(gridSize));
                 if ((location % gridLength) <= 5)
@@ -38,14 +37,14 @@ namespace battleship_console
             int x = 0;
             int row = 0;
             int col = 0;
-            while (x < size && randomCoords[x] != 0)
+            while (x < size)
             {
                 row = (int)(coords[x] / gridLength);
                 col = coords[x] % gridLength;
                 temp = alphabet[col];
                 randomCoords.Add(string.Concat(temp, row.ToString()));
                 x++;
-                System.Console.WriteLine(" coord " + x + " = " + randomCoords[x - 1]);
+                // System.Console.WriteLine(" coord "+x+" = " + randomCoords[x-1]);
             }
             return randomCoords;
         }
@@ -55,7 +54,7 @@ namespace battleship_console
             System.Console.WriteLine("\n  1 2 3 4 5 6 7 8 9 10 ");
             for (int i = 0; i < gridLength; i++)
             {
-                System.Console.WriteLine(alphabet[i] + gridUnits);
+                WriteLine(alphabet[i] + gridUnits);
             }
         }
     }
